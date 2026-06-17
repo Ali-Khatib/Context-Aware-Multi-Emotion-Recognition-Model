@@ -1,0 +1,7 @@
+torch
+numpy
+pillow
+scikit-learn
+joblib
+sentence-transformers
+google-genai

@@ -1,0 +1,5 @@
+# RetinaFace (Python 3.10 - 3.12). Pin versions so uvicorn can start (protobuf must match tf-keras).
+retina-face>=0.0.17
+tensorflow==2.19.1
+tf-keras==2.19.0
+protobuf>=6.31.1,<8

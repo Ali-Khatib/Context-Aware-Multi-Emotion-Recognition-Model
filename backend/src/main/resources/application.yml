@@ -1,0 +1,30 @@
+spring:
+  servlet:
+    multipart:
+      # Default is only 1MB — raises limit to match ImageController (10MB file)
+      max-file-size: 10MB
+      max-request-size: 12MB
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sengroup
+    username: postgres
+    password: postgres
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+server:
+  port: 8080
+
+app:
+  storage:
+    image-dir: storage/images
+  pipeline:
+    remote-base-url: http://localhost:8000/api/v1

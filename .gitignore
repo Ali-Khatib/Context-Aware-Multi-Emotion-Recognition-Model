@@ -1,0 +1,29 @@
+# Build / install artifacts
+backend/target/
+frontend/dist/
+frontend/node_modules/
+
+# Runtime uploads (created when the app runs)
+backend/storage/
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/.venv/
+**/.pytest_cache/
+
+# AI package — session crops & local demo output (not for repo)
+AI_BACKEND_INTEGRATION_PACKAGE/**/demo_runs/
+AI_BACKEND_INTEGRATION_PACKAGE/**/api_sessions/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+*.swp
+
+# Env secrets (never commit)
+.env
+.env.*

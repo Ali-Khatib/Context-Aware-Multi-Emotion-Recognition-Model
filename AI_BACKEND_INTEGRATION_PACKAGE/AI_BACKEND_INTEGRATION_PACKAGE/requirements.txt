@@ -1,0 +1,6 @@
+# Core pipeline. Python 3.14: OpenCV Haar face detection (no TensorFlow). See requirements-retina.txt for 3.10-3.12.
+torch>=2.2.0
+torchvision>=0.17.0
+opencv-python>=4.9.0.80
+Pillow>=10.3.0
+numpy>=1.26.4

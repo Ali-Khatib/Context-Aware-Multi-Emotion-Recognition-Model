@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    @apply scroll-smooth antialiased;
+    font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  body {
+    @apply m-0 min-h-dvh bg-[#07040f] text-violet-100/90;
+  }
+
+  #root {
+    @apply min-h-dvh;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-fuchsia-400/90;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-purple-400/25 bg-purple-950/25 shadow-[0_0_0_1px_rgba(168,85,247,0.08)_inset] backdrop-blur-xl;
+  }
+
+  .glass-card-hover {
+    @apply transition duration-300 ease-out will-change-transform;
+  }
+
+  .glass-card-hover:hover {
+    @apply -translate-y-0.5 shadow-[0_20px_50px_-20px_rgba(168,85,247,0.55),0_0_40px_-18px_rgba(217,70,239,0.35)];
+  }
+
+  .reveal-base {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+    transition:
+      opacity 900ms ease-out,
+      transform 900ms ease-out;
+    will-change: transform, opacity;
+  }
+
+  .reveal-base.reveal-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .text-gradient-hero {
+    @apply bg-gradient-to-r from-fuchsia-300 via-violet-300 to-purple-400 bg-clip-text font-extrabold tracking-tight text-transparent;
+  }
+
+  .stage-panel {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0) scale(0.96);
+    filter: blur(8px);
+    transition:
+      opacity 1100ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 1100ms cubic-bezier(0.22, 1, 0.36, 1),
+      filter 1100ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 900ms ease-out;
+    will-change: opacity, transform, filter;
+  }
+
+  .stage-panel--visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+    box-shadow:
+      0 0 0 1px rgba(192, 132, 252, 0.15) inset,
+      0 24px 60px -28px rgba(168, 85, 247, 0.55),
+      0 0 48px -20px rgba(217, 70, 239, 0.35);
+    animation: stage-fade-in 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .stage-panel--waiting {
+    opacity: 0.5;
+    transform: scale(0.98);
+    filter: blur(0);
+  }
+
+  @keyframes stage-fade-in {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 20px, 0) scale(0.96);
+      filter: blur(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  .stage-image-frame {
+    @apply relative w-full overflow-visible;
+  }
+}
