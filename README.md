@@ -1,4 +1,4 @@
-# Context-Aware Multi-Emotion Recognition Model
+# Context-Aware Multi-Emotion Recognition Model.
 
 Bahçeşehir University capstone project. We built a full-stack application that takes a group photo, detects every face, predicts emotions per person, refines those predictions using group context, and finally runs a vision-language fusion step. The result is shown in a React web UI with stage-by-stage breakdowns, charts, and downloadable reports.
 
