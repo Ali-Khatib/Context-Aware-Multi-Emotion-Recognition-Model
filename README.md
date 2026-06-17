@@ -29,7 +29,7 @@ Emotion classes throughout the pipeline: anger, disgust, fear, happy, neutral, s
 
 **Artificial Intelligence**
 
-- Nour Al Dakkak
+- Nour Al Dakkak nour.aldakkak@bahcesehir.edu.tr
 - Zahraa Hasan
 
 ## Architecture
