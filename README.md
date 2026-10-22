@@ -25,7 +25,7 @@ Emotion classes throughout the pipeline: anger, disgust, fear, happy, neutral, s
 **Software Engineering**
 
 - Ali Khatib — ali.khatib@bahcesehir.edu.tr
-- Kareem Hijazi — kareem.hijazi@bahcesehir.edu.tr
+- Karim Hijazi — karim.hijazi@bahcesehir.edu.tr
 
 **Artificial Intelligence**
 
